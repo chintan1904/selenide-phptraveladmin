@@ -23,3 +23,12 @@ services:
     environment:
       - HUB_HOST=selenium-hub
       - HUB_PORT=4444
+  test-suite:
+    image: cshah/phptraveladmin:demo
+    depends_on:
+      - selenium-hub
+      - firefox
+      - chrome
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444

@@ -19,9 +19,10 @@ public class BaseTest {
 	public RemoteWebDriver driver;
 	
 	@BeforeTest
-	@Parameters({"browser"})
-	public void setBrowserEnvironment(String browser) throws MalformedURLException {
-		driver = Browser.getRemoteDriver(browser);
+	@Parameters({"browser", "hub", "port"})
+	public void setBrowserEnvironment(String browser, String hub, String port) throws MalformedURLException {
+		String hubUrl = "http://"+hub+":"+port+"/wd/hub";
+		driver = Browser.getRemoteDriver(browser, hubUrl);
 		WebDriverRunner.setWebDriver(driver);
 	}
 	

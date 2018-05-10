@@ -8,9 +8,4 @@ ADD  target/libs /usr/share/tag/libs
 ADD  RegressionSuite.xml /usr/share/tag/RegressionSuite.xml
 
 # Command line to execute the test
-ENTRYPOINT /usr/bin/java -cp /usr/share/tag/libs/*:/usr/share/tag/phptravel-admin.jar -Dremote=$REMOTE org.testng.TestNG /usr/share/tag/RegressionSuite.xml
-
-
-
-#Below command not working
-#ENTRYPOINT ["/usr/bin/java", "-cp", "/usr/share/tag/phptravel-admin.jar", "org.testng.TestNG", "-testclass", "com.tests.LoginPageTest"]
+ENTRYPOINT /usr/bin/java -cp /usr/share/tag/libs/*:/usr/share/tag/phptravel-admin.jar -Dhub=$HUB_HOST -Dport=$HUB_PORT org.testng.TestNG /usr/share/tag/RegressionSuite.xml
