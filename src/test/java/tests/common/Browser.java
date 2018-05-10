@@ -10,7 +10,8 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 public class Browser {
 
 	public static RemoteWebDriver getRemoteDriver(String browser) throws MalformedURLException {
-		return new RemoteWebDriver(new URL("http://172.22.29.60:4444/wd/hub"), getBrowserCapability(browser));
+		//return new RemoteWebDriver(new URL("http://172.22.29.60:4444/wd/hub"), getBrowserCapability(browser));
+		return new RemoteWebDriver(new URL("http://192.168.99.100:4444/wd/hub"), getBrowserCapability(browser));
 	}
 	
 	private static DesiredCapabilities getBrowserCapability(String browserType) {

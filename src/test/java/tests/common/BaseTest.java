@@ -31,4 +31,13 @@ public class BaseTest {
 			driver.quit();
 		}
 	}
+	
+	
+//	@BeforeTest
+//	@Parameters({"browser"})
+//	public void setBrowserEnvironment(String browser) throws MalformedURLException {
+//		
+//		if("chrome".equalsIgnoreCase(browser)) 
+//			System.setProperty("selenide.browser", "chrome");
+//	}
 }

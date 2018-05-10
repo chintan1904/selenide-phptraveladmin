@@ -100,8 +100,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<dockerHost>https://192.168.99.100:2376</dockerHost>
-					<dockerCertPath>C:\Users\chintan.shah\.docker\machine\certs</dockerCertPath>
 					<repository>cshah/phptraveladmin</repository>
 					<tag>demo</tag>
 				</configuration>
